@@ -3,19 +3,23 @@
 {% block content %}
     <div class="container">
         <!-- Cards in the body -->
-        <div class="card">
-            <h2>Don</h2>
-            <p>Description of the card goes here.</p>
-        </div>
-        <div class="card">
-            <h2>Saber</h2>
-            <p>Description of the card goes here.</p>
-        </div>
+        <ul class="message-list">
+            <div class="card">
+                <h2>Don</h2>
+                <p>Description of the card goes here.</p>
+            </div>
+            <div class="card">
+                <h2>Saber</h2>
+                <p>Description of the card goes here.</p>
+            </div>
+        </ul>
 
-        <div class="input-btn">
-            <input type="text" placeholder="Enter text...">
-            <button>Submit</button>
-        </div>
-
+        <form class="message-form">
+            {% csrf_token %}
+            <div class="input-btn">
+                <input class="message-input" type="text" placeholder="Enter text...">
+                <button>Submit</button>
+            </div>
+        </form>
     </div>
 {% endblock %}
