@@ -10,4 +10,19 @@ messageForm.addEventListener('submit', (event) => {
     if (message.length === 0) {
         return;
     }
+
+    const messageItem = document.createElement('div');
+    messageItem.classList.add('card', 'sent');
+
+    messageItem.innerHTML = `
+        <div class="message-text">
+            <div class="message-sender">
+                <b>You</b>
+            </div>
+            <div class="message-content">
+                ${message}
+            </div>
+        </div>`;
+    messageList.appendChild(messageItem);
+    messageInput.value = '';
 })
