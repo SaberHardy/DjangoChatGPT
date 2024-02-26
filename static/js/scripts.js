@@ -40,15 +40,17 @@ messageForm.addEventListener('submit', (event) => {
             const messageItem = document.createElement('div');
             messageItem.classList.add('message', 'received');
             messageItem.innerHTML = `
-        <div class="message-text">
-            <div class="message-sender">
-              <b>AI Chatbot</b>
-            </div>
-            <div class="message-content">
-                ${response}
-            </div>
-        </div>
-          `;
+                <div class="card">
+                    <div class="message-text">
+                        <div class="message-sender">
+                          <b>AI Chatbot</b>
+                        </div>
+                        <div class="message-content">
+                            ${response}
+                        </div>
+                    </div>
+                </div>`;
+
             messagesList.appendChild(messageItem);
         });
 });
